@@ -1,0 +1,35 @@
+// Breakpoints
+
+
+// @media (min-width:64em) {
+//     //style
+// }
+
+//375px, 640px, 1024px, 1440px 
+$maximum-width: (
+    "mobile":"27.5675em",
+    "tablet":"48em",
+    "laptop":"60em",
+    "L-laptop":"90em",
+);
+
+// 639px, 1023px, 1439px 
+$minimum-width: (
+    // "mobile":"26.5675em",
+    "tablet":"27.5675em",
+    "laptop":"49em",
+    "L-laptop":"60em",
+    "XL-laptop":"90em",
+);
+
+@mixin maximum($size) {
+    @media (max-width :map-get($maximum-width, $size)) {
+        @content;
+    }
+}
+
+@mixin minimum($size) {
+    @media (min-width :map-get($minimum-width, $size)) {
+        @content;
+    }
+}

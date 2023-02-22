@@ -1,0 +1,50 @@
+header {
+    margin: 0 auto;
+    max-width: 80%;
+    position: relative;
+    // @include minimum(large){
+    //     width: 100%;
+    // }
+    img {
+        width: 145px;
+    }
+
+    a {
+        color: $DarkBlue;
+        font-weight: $fw-md;
+
+        &:hover {
+            color: $DarkGrayishBlue;
+        }
+    }
+
+    nav {
+
+        padding: 2.5rem 0;
+
+        .desktop_menu {
+            :not(:last-child) {
+                padding-right: 2.18rem; //35px
+            }
+        }
+
+        .ham,
+        .close {
+            width: 1.5625rem; // 25px
+        }
+    }
+
+    .mobile_menu {
+        text-align: center;
+        background-color: $VaryLightGray;
+        padding: 1.8rem 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        a {
+            display: block;
+            padding: 14px 0; //14px
+        }
+    }
+}

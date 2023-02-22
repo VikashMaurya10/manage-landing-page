@@ -1,0 +1,60 @@
+.about {
+    max-width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+
+    &__inner {
+
+
+        &__left {
+            max-width: 80%;
+            margin: 0 auto;
+            span{
+                display: block;
+            }
+            p {
+                font-size: 0.97rem; // 12px;
+            }
+        }
+
+        &__right {
+            width: 100%;
+            button {
+                padding: 0.8125rem 1.5rem; // 13px 24px;
+            }
+
+            h3,
+            button {
+                font-size: 0.85rem; // 12px;
+            }
+
+            h3 {
+                margin-left: 1rem;
+                background-color: $HoverBrightRed;
+
+                span {
+
+                    padding: 0.8rem 0;
+                    border-radius: 50px 0 0 50px;
+                }
+
+            }
+
+            p {
+                font-size: 0.8rem;
+                font-weight: $fw-md;
+            }
+        }
+    }
+}
+
+.bg-svg {
+    position: absolute;
+    z-index: -1;
+
+    @include maximum(mobile) {
+        top: 25rem;
+        left: 14rem;
+    }
+}
